@@ -1,0 +1,5 @@
+﻿# IDE - VSCode
+.idea
+
+# tests & sonar
+/node_modules/
