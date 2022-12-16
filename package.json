@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "cypress-open-consult": "cypress open --browser chrome --config baseUrl=https://consult.acceptatie.spreekuur.nl/,specPattern=cypress/integration/Consult/**/*.feature",
+    "cypress-open-design": "cypress open --browser chrome --config baseUrl=https://consult.acceptatie.spreekuur.nl/,specPattern=cypress/integration/Design/**/*.feature",
     "cypress-open-digidok": "cypress open --browser chrome --config baseUrl=https://saas.monitoring.viplive.nl/,specPattern=cypress/integration/Digidok/**/*.feature"
   },
   "devDependencies": {
