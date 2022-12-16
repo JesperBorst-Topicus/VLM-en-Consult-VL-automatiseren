@@ -1,7 +1,7 @@
 Feature: Test
 
     Background:
-        * Gebruiker navigeert naar de "welkom" pagina
+        * Gebruiker navigeert naar de "" pagina
 
-    Scenario:
+    Scenario: Temp
         Given Gebruiker klikt op de "test" knop

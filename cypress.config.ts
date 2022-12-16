@@ -8,7 +8,6 @@ const cypressJsonConfig = {
   supportFile: './cypress/support/index.ts',
   video: false,
   videosFolder: './videos',
-  specPattern: '**/*.{feature,features}',
   excludeSpecPattern: ['*.{js,ts}', '**/ref/**/*.feature'],
   retries: 0,
   watchForFileChanges: false,
