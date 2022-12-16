@@ -1,8 +1,23 @@
 {
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress-open-consult": "cypress open --browser chrome --config baseUrl=https://consult.acceptatie.spreekuur.nl/",
+    "cypress-open-digidok": "cypress open --browser chrome --config baseUrl=https://saas.monitoring.viplive.nl/"
   },
   "devDependencies": {
-    "cypress": "^12.1.0"
+    "@cypress/webpack-preprocessor": "^5.15.7",
+    "cypress": "^12.1.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "ts-loader": "^9.4.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "./cypress/integration/**/*.steps.ts",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "./cucumber"
+    }
   }
 }
