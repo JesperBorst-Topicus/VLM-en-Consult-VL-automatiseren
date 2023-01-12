@@ -3,7 +3,7 @@ import { Given } from '@badeball/cypress-cucumber-preprocessor';
 Given('Gebruiker {string} logt in bij Consult', (gebruiker: string) => {
     cy.get('button').contains('Alles toestaan').click();
     cy.contains('Ik heb al een account').click();
-    cy.fixture(`users/Design/${gebruiker}`).then((TestAccount) => {
+    cy.fixture(`Design/users/${gebruiker}`).then((TestAccount) => {
         cy.get('#username').type(TestAccount.username);
         cy.get('#password').type(TestAccount.password);
     });
@@ -11,7 +11,7 @@ Given('Gebruiker {string} logt in bij Consult', (gebruiker: string) => {
 });
 
 Given('Gebruiker {string} logt in bij Digidok', (gebruiker: string) => {
-    cy.fixture(`users/Digidok/${gebruiker}`).then((userJson) => {
+    cy.fixture(`Digidok/users/${gebruiker}`).then((userJson) => {
         cy.get(`#username`).type(userJson.username);
         cy.get(`#password`).type(userJson.password);
         cy.get(`#organisatie`).type(userJson.organization);
