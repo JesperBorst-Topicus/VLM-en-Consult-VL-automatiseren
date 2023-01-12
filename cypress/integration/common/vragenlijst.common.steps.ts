@@ -3,10 +3,10 @@ import { Given } from '@badeball/cypress-cucumber-preprocessor';
 Given('Gebruiker vult {string} in bij de {string} vraag', (antwoord: string, vraagTitel: string) => {
     cy.contains(vraagTitel).should("be.visible");
     cy.get('body').then($body => {
-        if ($body.find('input').length > 0) {
-            cy.get('input').clear().type(antwoord);
-        } else if ($body.find('textarea').length > 0) {
-            cy.get('textarea').clear().type(antwoord);
+        if ($body.find('ds-input input').length > 0) {
+            cy.get('ds-input input').clear().type(antwoord);
+        } else if ($body.find('ds-textarea textarea').length > 0) {
+            cy.get('ds-textarea textarea').clear().type(antwoord);
         }
     });
 });
