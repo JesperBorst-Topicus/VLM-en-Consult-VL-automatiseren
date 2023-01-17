@@ -15,16 +15,16 @@ Given('Gebruiker kiest de {string} antwoorden bij de {string} vraag', (meerdereA
     cy.contains(vraagTitel).should("be.visible");
     for (const antwoord of meerdereAntwoorden.split(' & ')) {
         cy.get(`app-keuze-optie:contains("${antwoord}")`).each((element) => {
-            cy.wrap(element).invoke('text').then((textFromElement) => {
-                if (textFromElement.trim() === antwoord) {
-                    if (element.find('.mat-radio-checked').length > 0) {
+            cy.wrap(element)
+                .invoke('text')
+                .then((textFromElement) => {
+                    if (textFromElement.trim() === antwoord && element.find('.mat-radio-checked').length > 0) {
                         cy.contains('button', 'volgende', { matchCase: false }).click();
-                    } else {
+                    } else if (textFromElement.trim() === antwoord){
                         cy.wrap(element).click();
                     }
-                }
-            })
-        })
+                });
+        });
     }
 });
 
