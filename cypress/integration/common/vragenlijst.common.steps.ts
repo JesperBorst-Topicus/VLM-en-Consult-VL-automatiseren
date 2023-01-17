@@ -35,7 +35,7 @@ Given('Gebruiker upload de {string} afbeelding bij de {string} vraag bij Consult
 
 Given('Gebruiker controleert het {string} antwoord bij de {string} vraag', (enkelAntwoord: string, vraagTitel: string) => {
     cy.contains(vraagTitel).should("be.visible");
-    cy.get('app-keuze-optie').contains(enkelAntwoord).should('be.visible');
+    cy.get('app-keuze-optie').contains(enkelAntwoord).should("be.visible");
 });
 
 Given('Gebruiker controleert de {string} vraag titel', (vraagTitel: string) => {
