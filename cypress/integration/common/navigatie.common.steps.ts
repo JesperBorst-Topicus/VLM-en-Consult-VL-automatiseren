@@ -4,7 +4,8 @@ Given('Gebruiker navigeert naar de {string} pagina', (pagina: string) => {
     cy.visit(pagina);
 });
 
-Given('Gebruiker klikt op de Volgende knop', () => {
+Given('Gebruiker klikt op de Volgende knop bij de {string} vraag', (vraagTitel: string) => {
+    cy.contains(vraagTitel).should("be.visible");
     cy.contains('button', 'volgende', { matchCase: false }).click();
 });
 

@@ -1,3 +1,4 @@
 ﻿.idea
 /node_modules/
-/cypress/fixtures/users/
+/cypress/fixtures/Design/users
+/cypress/fixtures/Digidok/users
